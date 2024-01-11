@@ -1,9 +1,16 @@
-/**
- * The API client is a wrapper around the API implementation and allows us to easily switch between different API implementations.
- *
- * For example, the demo app uses @api/demo-client by default. Which returns mocked/fake data and is useful for testing and
- * development and is used in the demo application.
- *
- * The export could be your own api client, eg @api/graphql-client or @api/supabase-client.
- */
-export * from '@api/demo-client'
+// @api/prisma-client/index.ts
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
+export const getContacts = async (type?: string | null) => {
+  // ... implementación de la función utilizando Prisma
+};
+
+export const getContact = async (id: string) => {
+  // ... implementación de la función utilizando Prisma
+};
+
+// ... implementa las demás funciones de la API utilizando Prisma
+
+// No olvides exportar todas las funciones que necesitas
