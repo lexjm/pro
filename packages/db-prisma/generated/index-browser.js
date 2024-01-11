@@ -1,83 +1,87 @@
-Object.defineProperty(exports, '__esModule', { value: true })
+
+Object.defineProperty(exports, "__esModule", { value: true });
 
 const {
   Decimal,
   objectEnumValues,
   makeStrictEnum,
   Public,
+  detectRuntime,
 } = require('./runtime/index-browser')
+
 
 const Prisma = {}
 
 exports.Prisma = Prisma
+exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 5.0.0
- * Query Engine version: 6b0aef69b7cdfc787f822ecd7cdc76d5f1991584
+ * Prisma Client JS version: 5.7.1
+ * Query Engine version: 0ca5ccbcfa6bdc81c003cf549abe4269f59c41e5
  */
 Prisma.prismaVersion = {
-  client: '5.0.0',
-  engine: '6b0aef69b7cdfc787f822ecd7cdc76d5f1991584',
+  client: "5.7.1",
+  engine: "0ca5ccbcfa6bdc81c003cf549abe4269f59c41e5"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
-  throw new Error(`PrismaClientKnownRequestError is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`PrismaClientKnownRequestError is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)};
 Prisma.PrismaClientUnknownRequestError = () => {
-  throw new Error(`PrismaClientUnknownRequestError is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`PrismaClientUnknownRequestError is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.PrismaClientRustPanicError = () => {
-  throw new Error(`PrismaClientRustPanicError is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`PrismaClientRustPanicError is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.PrismaClientInitializationError = () => {
-  throw new Error(`PrismaClientInitializationError is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`PrismaClientInitializationError is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.PrismaClientValidationError = () => {
-  throw new Error(`PrismaClientValidationError is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`PrismaClientValidationError is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.NotFoundError = () => {
-  throw new Error(`NotFoundError is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`NotFoundError is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.Decimal = Decimal
 
 /**
  * Re-export of sql-template-tag
  */
 Prisma.sql = () => {
-  throw new Error(`sqltag is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`sqltag is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.empty = () => {
-  throw new Error(`empty is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`empty is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.join = () => {
-  throw new Error(`join is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`join is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.raw = () => {
-  throw new Error(`raw is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`raw is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.validator = Public.validator
 
 /**
- * Extensions
- */
+* Extensions
+*/
 Prisma.getExtensionContext = () => {
-  throw new Error(`Extensions.getExtensionContext is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`Extensions.getExtensionContext is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 Prisma.defineExtension = () => {
-  throw new Error(`Extensions.defineExtension is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`)
-}
+  throw new Error(`Extensions.defineExtension is unable to be run ${runtimeDescription}.
+In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
+)}
 
 /**
  * Shorthand utilities for JSON filtering
@@ -89,7 +93,7 @@ Prisma.AnyNull = objectEnumValues.instances.AnyNull
 Prisma.NullTypes = {
   DbNull: objectEnumValues.classes.DbNull,
   JsonNull: objectEnumValues.classes.JsonNull,
-  AnyNull: objectEnumValues.classes.AnyNull,
+  AnyNull: objectEnumValues.classes.AnyNull
 }
 
 /**
@@ -100,8 +104,8 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   ReadUncommitted: 'ReadUncommitted',
   ReadCommitted: 'ReadCommitted',
   RepeatableRead: 'RepeatableRead',
-  Serializable: 'Serializable',
-})
+  Serializable: 'Serializable'
+});
 
 exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
@@ -112,8 +116,8 @@ exports.Prisma.UserScalarFieldEnum = {
   status: 'status',
   avatar: 'avatar',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-}
+  updatedAt: 'updatedAt'
+};
 
 exports.Prisma.OrganizationScalarFieldEnum = {
   id: 'id',
@@ -124,15 +128,15 @@ exports.Prisma.OrganizationScalarFieldEnum = {
   logo: 'logo',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  userId: 'userId',
-}
+  userId: 'userId'
+};
 
 exports.Prisma.OrganizationMemberScalarFieldEnum = {
   id: 'id',
   userId: 'userId',
   organizationId: 'organizationId',
-  roles: 'roles',
-}
+  roles: 'roles'
+};
 
 exports.Prisma.SubscriptionScalarFieldEnum = {
   id: 'id',
@@ -142,8 +146,8 @@ exports.Prisma.SubscriptionScalarFieldEnum = {
   startedAt: 'startedAt',
   trialEndsAt: 'trialEndsAt',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-}
+  updatedAt: 'updatedAt'
+};
 
 exports.Prisma.ContactScalarFieldEnum = {
   id: 'id',
@@ -155,8 +159,8 @@ exports.Prisma.ContactScalarFieldEnum = {
   type: 'type',
   tags: 'tags',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-}
+  updatedAt: 'updatedAt'
+};
 
 exports.Prisma.ActivityScalarFieldEnum = {
   id: 'id',
@@ -166,41 +170,42 @@ exports.Prisma.ActivityScalarFieldEnum = {
   date: 'date',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-}
+  readAt: 'readAt'
+};
 
 exports.Prisma.SortOrder = {
   asc: 'asc',
-  desc: 'desc',
-}
+  desc: 'desc'
+};
 
 exports.Prisma.QueryMode = {
   default: 'default',
-  insensitive: 'insensitive',
-}
+  insensitive: 'insensitive'
+};
 
 exports.Prisma.NullsOrder = {
   first: 'first',
-  last: 'last',
-}
-exports.Role = {
+  last: 'last'
+};
+exports.Role = exports.$Enums.Role = {
   owner: 'owner',
   admin: 'admin',
-  member: 'member',
-}
+  member: 'member'
+};
 
-exports.SubscriptionStatus = {
+exports.SubscriptionStatus = exports.$Enums.SubscriptionStatus = {
   active: 'active',
   trialing: 'trialing',
   past_due: 'past_due',
   paused: 'paused',
-  canceled: 'canceled',
-}
+  canceled: 'canceled'
+};
 
-exports.ActivityType = {
+exports.ActivityType = exports.$Enums.ActivityType = {
   action: 'action',
   update: 'update',
-  comment: 'comment',
-}
+  comment: 'comment'
+};
 
 exports.Prisma.ModelName = {
   User: 'User',
@@ -208,20 +213,40 @@ exports.Prisma.ModelName = {
   OrganizationMember: 'OrganizationMember',
   Subscription: 'Subscription',
   Contact: 'Contact',
-  Activity: 'Activity',
-}
+  Activity: 'Activity'
+};
 
 /**
- * Create the Client
+ * This is a stub Prisma Client that will error at runtime if called.
  */
 class PrismaClient {
   constructor() {
-    throw new Error(
-      `PrismaClient is unable to be run in the browser.
-In case this error is unexpected for you, please report it in https://github.com/prisma/prisma/issues`,
-    )
+    return new Proxy(this, {
+      get(target, prop) {
+        const runtime = detectRuntime()
+        const edgeRuntimeName = {
+          'workerd': 'Cloudflare Workers',
+          'deno': 'Deno and Deno Deploy',
+          'netlify': 'Netlify Edge Functions',
+          'edge-light': 'Vercel Edge Functions',
+        }[runtime]
+
+        let message = 'PrismaClient is unable to run in '
+        if (edgeRuntimeName !== undefined) {
+          message += edgeRuntimeName + '. As an alternative, try Accelerate: https://pris.ly/d/accelerate.'
+        } else {
+          message += 'this browser environment, or has been bundled for the browser (running in `' + runtime + '`).'
+        }
+        
+        message += `
+If this is unexpected, please open an issue: https://github.com/prisma/prisma/issues`
+
+        throw new Error(message)
+      }
+    })
   }
 }
+
 exports.PrismaClient = PrismaClient
 
 Object.assign(exports, Prisma)
